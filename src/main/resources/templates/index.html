@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title th:text="${pageTitle}"></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <th:block th:include="blocks/style-files.html :: headerfiles"></th:block>
+</head>
+<body>
+
+<div class="site-wrap">
+    <th:block th:insert="blocks/header :: siteMenu"></th:block>
+    <th:block th:insert="blocks/header :: header"></th:block>
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_1.jpg);'">
+                <a th:href="@{images/img_1.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title 1</h2>
+                        <div class="scrollbar-inner style-scrollbar-sm js-scrollbar-container">
+                            <p class="mb-0">Description anons!</p>
+                            <a href="/">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_2.jpg);'">
+                <a th:href="@{images/img_2.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title 2</h2>
+                        <p class="mb-0">Description anons!</p>
+                        <a href="/">read more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_3.jpg);'">
+                <a th:href="@{images/img_3.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 3</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_4.jpg);'">
+                <a th:href="@{images/img_4.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 4</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_5.jpg);'">
+                <a th:href="@{images/img_5.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 5</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_6.jpg);'">
+                <a th:href="@{images/img_6.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 6</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_7.jpg);'">
+                <a th:href="@{images/img_7.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 7</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_8.jpg);'">
+                <a th:href="@{images/img_8.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 8</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_9.jpg);'">
+                <a th:href="@{images/img_9.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 9</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_10.jpg);'">
+                <a th:href="@{images/img_10.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 10</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_1.jpg);'">
+                <a th:href="@{images/img_1.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here</h2>
+                        <div class="scrollbar-inner style-scrollbar-sm js-scrollbar-container">
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                                dolorum laboriosam voluptatum laudantium. Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Aspernatur facilis architecto deserunt doloribus, nisi placeat quas
+                                ratione perferendis? Placeat aliquid assumenda, odio numquam vero eveniet fugit
+                                blanditiis dolorum laudantium voluptatibus!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_2.jpg);'">
+                <a th:href="@{images/img_2.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 2</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_3.jpg);'">
+                <a th:href="@{images/img_3.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 3</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_4.jpg);'">
+                <a th:href="@{images/img_4.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 4</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_5.jpg);'">
+                <a th:href="@{images/img_5.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 5</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_6.jpg);'">
+                <a th:href="@{images/img_6.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 6</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_7.jpg);'">
+                <a th:href="@{images/img_7.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 7</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_8.jpg);'">
+                <a th:href="@{images/img_8.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 8</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_9.jpg);'">
+                <a th:href="@{images/img_9.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 9</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide cover" th:style="'background-image: url(images/img_10.jpg);'">
+                <a th:href="@{images/img_10.jpg}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                <div class="img-info">
+                    <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
+                    <div class="img-info-content">
+                        <h2>Image Title Here 10</h2>
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, ipsam, illo
+                            dolorum laboriosam voluptatum laudantium.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_1.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_2.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_3.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_4.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_5.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_6.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_7.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_8.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_9.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_10.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_1.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_2.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_3.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_4.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_5.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_6.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_7.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_8.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_9.jpg)'"></div>
+            <div class="swiper-slide cover" th:style="'background-image:url(images/img_10.jpg)'"></div>
+        </div>
+    </div>
+
+</div> <!-- .site-wrap -->
+
+<th:block th:include="blocks/js-files.html :: jsfiles"></th:block>
+
+</body>
+</html>

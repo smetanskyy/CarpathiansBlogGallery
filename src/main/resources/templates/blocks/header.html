@@ -1,0 +1,33 @@
+<div class="site-mobile-menu" th:fragment="siteMenu" xmlns:th="http://www.thymeleaf.org">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+
+<header class="header-bar d-flex d-lg-flex align-items-center" th:classappend="${#strings.equals(pageTitle, 'Home page')? '' : 'inner-page-header'}"
+        data-aos="fade-down" th:fragment="header" xmlns:th="http://www.thymeleaf.org">
+    <div class="site-logo">
+        <a href="/">Carpathians Blog</a>
+    </div>
+    <div class="d-inline-block d-xl-block ml-md-0 ml-auto py-3" style="position: relative; top: 3px;">
+        <a href="#" class="site-menu-toggle js-menu-toggle text-white">
+            <span class="icon-menu h3"></span>
+            <span style="position: relative;top: -4px; text-transform: uppercase;">Menu</span></a></div>
+    <div class="main-menu d-none">
+        <ul class="js-clone-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Photos</a></li>
+            <li><a th:href="@{/add-post}">Add Post</a></li>
+            <li><a href="/">About Me</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+        <ul class="social js-clone-nav">
+            <li><a href="#"><span class="icon-facebook"></span></a></li>
+            <li><a href="#"><span class="icon-twitter"></span></a></li>
+            <li><a href="#"><span class="icon-instagram"></span></a></li>
+        </ul>
+    </div>
+</header>
