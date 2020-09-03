@@ -10,13 +10,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PostController {
     private final PostRepository postRepository;
-
     @Autowired
     public PostController(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
 
-    @GetMapping("/add-post")
+    @GetMapping("/post/add-post")
     public String addPost(Model model) {
         //Iterable<Post> posts = postRepository.findAll();
         //model.addAttribute("posts", posts);
