@@ -15,6 +15,11 @@ public class MainController {
     }
 
     @GetMapping("/")
+    public String mainRedirect(){
+        return "redirect:/index";
+    }
+
+    @GetMapping("/index")
     public String main(Model model) {
         Iterable<Post> posts = postRepository.findAll();
         model.addAttribute("posts", posts);

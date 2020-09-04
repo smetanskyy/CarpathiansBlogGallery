@@ -44,7 +44,7 @@ public class PostController {
     ) {
 
         Post post;
-        if (file != null && !file.getOriginalFilename().isEmpty()) {
+        if (file != null && !Objects.requireNonNull(file.getOriginalFilename()).isEmpty()) {
             try {
                 Path path = Paths.get("src/main/resources/static/images");
                 String uuidFile = UUID.randomUUID().toString();
@@ -58,11 +58,11 @@ public class PostController {
                 Files.copy(inputStream, path.resolve(resultFileName), StandardCopyOption.REPLACE_EXISTING);
                 post.setImage(resultFileName);
                 postRepository.save(post);
-                model.addAttribute("pageTitle", "Posts page");
-                model.addAttribute("post", post);
+                model.addAttribute("pageTitle", "Succeed");
                 return "add-succeed";
 
             } catch (Exception e) {
+                model.addAttribute("pageTitle", "Error");
                 return "add-error";
             }
         }
@@ -72,8 +72,9 @@ public class PostController {
 
     @GetMapping("/post/{id}")
     public String showPost(@PathVariable("id") long id, Model model){
-        Optional<Post> post = postRepository.findById(id);
+        Post post = postRepository.findById(id).orElse(new Post());
         model.addAttribute("post", post);
-        return "index";
+        model.addAttribute("pageTitle", "Post");
+        return "post";
     }
 }
