@@ -7,38 +7,39 @@
     <th:block th:include="blocks/style-files.html :: headerfiles"></th:block>
 </head>
 <body>
-<div class="site-wrap">
+<div class="site-wrap w-100">
     <th:block th:insert="blocks/header :: siteMenu"></th:block>
     <th:block th:insert="blocks/header :: header"></th:block>
     <main class="main-content">
         <div class="container-fluid photos">
-            <div class="row justify-content-center">
-                <div class="mt-5">
-                    <form method="POST" enctype="multipart/form-data" action="/add-post">
-                        <table>
-                            <tr>
-                                <td>Title:</td>
-                                <td><input aria-label="title" type="text" name="title"/></td>
-                            </tr>
-                            <tr>
-                                <td>Anons:</td>
-                                <td><input aria-label="anons" type="text" name="anons"/></td>
-                            </tr>
-                            <tr>
-                                <td>Full text:</td>
-                                <td><textarea aria-label="fulltext" name="fullText"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>File to upload:</td>
-                                <td><input type="file" name="file"/></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><input type="submit" value="Upload"/></td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
+            <div class="row mt-3 justify-content-center">
+                <form method="post" enctype="multipart/form-data" action="/post/add-post">
+                    <div class="row form-group mb-5">
+                        <label class="text-dark" for="titleInput">Title:</label>
+                        <input type="text" name="title" class="form-control text-black-50" id="titleInput"
+                               aria-describedby="titleHelp" placeholder="Enter title">
+                    </div>
+
+                    <div class="row form-group mb-5">
+                        <label class="text-dark" for="anonsInput">Anons:</label>
+                        <input type="text" name="anons" class="form-control text-black-50" id="anonsInput"
+                               aria-describedby="anonsHelp" placeholder="Enter anons">
+                    </div>
+
+                    <div class="row form-group mb-5">
+                        <label class="text-dark" for="anonsInput">Full text:</label>
+                        <textarea name="fullText" class="form-control text-black-50" id="fullText" aria-label="fullText"
+                                  aria-describedby="fullTextHelp" placeholder="Enter fullText"></textarea>
+                    </div>
+
+                    <div class="row form-group mb-5">
+                        <label class="text-dark" for="fileInput">File to upload:</label>
+                        <input type="file" name="file" class="form-control-file" id="fileInput">
+                    </div>
+                    <div class="row form-group mb-5">
+                        <button type="submit" class="btn btn-primary">Add Post</button>
+                    </div>
+                </form>
 
             </div>
 
