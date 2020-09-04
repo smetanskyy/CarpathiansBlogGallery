@@ -21,4 +21,16 @@ public class MainController {
         model.addAttribute("pageTitle", "Home page");
         return "index";
     }
+    @GetMapping("/photos")
+    public String showPhotos(Model model) {
+        Iterable<Post> posts = postRepository.findAll();
+        model.addAttribute("posts", posts);
+        model.addAttribute("pageTitle", "Photos");
+        return "photos";
+    }
+    @GetMapping("/bio")
+    public String showBio(Model model) {
+        model.addAttribute("pageTitle", "About Us");
+        return "bio";
+    }
 }

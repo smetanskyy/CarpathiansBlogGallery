@@ -19,10 +19,11 @@
     <div class="main-menu d-none">
         <ul class="js-clone-nav">
             <li class="active"><a href="/">Home</a></li>
-            <li><a href="/">Photos</a></li>
+            <li><a th:href="@{/photos}">Photos</a></li>
             <li><a th:href="@{/post/add-post}">Add Post</a></li>
-            <li><a href="/">About Me</a></li>
-            <li><a href="/">Contact</a></li>
+
+            <li><a th:href="@{/bio}">About Me</a></li>
+<!--            <li><a th:href="@{/}">Contact</a></li>-->
         </ul>
         <ul class="social js-clone-nav">
             <li><a href="#"><span class="icon-facebook"></span></a></li>

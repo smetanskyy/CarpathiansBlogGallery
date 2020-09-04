@@ -17,8 +17,8 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide cover" th:each="itemPost , iStat  : ${posts}"
-                 th:style="'background-image: url(images/' + ${itemPost.getImage()} + ');'">
-                <a th:href="@{'images/' + ${itemPost.getImage()}}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
+                 th:style="'background-image: url(get-image/' + ${itemPost.getImage()} + ');'">
+                <a th:href="@{'get-image/' + ${itemPost.getImage()}}" data-fancybox="gallery" class="zoom"><span class="icon-search"></span></a>
                 <div class="img-info">
                     <span class="btn-toggle-expand"><span class="icon-call_made"></span></span>
                     <div class="img-info-content">
@@ -39,7 +39,7 @@
     <div class="swiper-container gallery-thumbs">
         <div class="swiper-wrapper">
             <div class="swiper-slide cover" th:each="itemPost : ${posts}"
-                 th:style="'background-image:url(images/' + ${itemPost.getImage()} + ');'"></div>
+                 th:style="'background-image:url(get-image/' + ${itemPost.getImage()} + ');'"></div>
         </div>
     </div>
 

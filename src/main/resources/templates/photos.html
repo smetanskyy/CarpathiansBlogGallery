@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title th:text="${pageTitle}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <th:block th:include="blocks/style-files.html :: headerfiles"></th:block>
+</head>
+<body>
+<div class="site-wrap">
+    <th:block th:insert="blocks/header :: siteMenu"></th:block>
+    <th:block th:insert="blocks/header :: header"></th:block>
+
+    <main class="main-content">
+        <div class="container-fluid photos">
+            <div class="row align-items-stretch">
+                <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" th:each="itemPost : ${posts}" data-aos-delay="100">
+                    <a th:href="@{'get-image/' + ${itemPost.getImage()}}" class="d-block photo-item" data-fancybox="gallery">
+                        <img th:src="@{'get-image/' + ${itemPost.getImage()}}" src="" alt="Image" class="img-fluid">
+                        <div class="photo-text-more">
+                            <span class="icon icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center py-5">
+                    <p>
+                        Copyright &copy;<script th:text="'document.write(new Date().getFullYear());'"></script>
+                        All rights reserved!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<th:block th:include="blocks/js-files.html :: jsfiles"></th:block>
+</body>
+</html>
