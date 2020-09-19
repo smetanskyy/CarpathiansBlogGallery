@@ -1,4 +1,5 @@
 package com.example.CarpathiansBlog.controllers;
+
 import com.example.CarpathiansBlog.models.Post;
 import com.example.CarpathiansBlog.repo.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,14 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MainController {
-    private final PostRepository postRepository;
     @Autowired
-    public MainController(PostRepository postRepository) {
-        this.postRepository = postRepository;
-    }
+    private PostRepository postRepository;
 
     @GetMapping("/")
-    public String mainRedirect(){
+    public String mainRedirect() {
         return "redirect:/index";
     }
 

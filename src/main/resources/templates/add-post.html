@@ -2,7 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <title th:text="${pageTitle}"></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <th:block th:include="blocks/style-files.html :: headerfiles"></th:block>
 </head>
@@ -13,7 +14,8 @@
     <main class="main-content">
         <div class="container-fluid photos">
             <div class="row mt-3 justify-content-center">
-                <form method="post" enctype="multipart/form-data" action="/post/add-post">
+                <div class="col-md-6 mr-2 ml-2">
+                <form method="post" enctype="multipart/form-data" th:action="@{/post/add-post}">
                     <div class="row form-group mb-5">
                         <label class="text-dark" for="titleInput">Title:</label>
                         <input type="text" name="title" class="form-control text-black-50" id="titleInput"
@@ -29,7 +31,7 @@
                     <div class="row form-group mb-5">
                         <label class="text-dark" for="anonsInput">Full text:</label>
                         <textarea name="fullText" class="form-control text-black-50" id="fullText" aria-label="fullText"
-                                  aria-describedby="fullTextHelp" placeholder="Enter fullText"></textarea>
+                                  aria-describedby="fullTextHelp" placeholder="Enter full text"></textarea>
                     </div>
 
                     <div class="row form-group mb-5">
@@ -37,10 +39,11 @@
                         <input type="file" name="file" class="form-control-file" id="fileInput">
                     </div>
                     <div class="row form-group mb-5">
+                        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
                         <button type="submit" class="btn btn-primary">Add Post</button>
                     </div>
                 </form>
-
+                </div>
             </div>
 
             <div class="row justify-content-center">
